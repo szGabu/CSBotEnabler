@@ -34,12 +34,12 @@ jobs:
       - name: Prepare Metamod
         run: |
           cd alliedmodders
-          git clone https://github.com/alliedmodders/metamod-hl1
+          git clone --recurse-submodules https://github.com/alliedmodders/metamod-hl1
 
       - name: Prepare HLSDK SDK
         run: |
           cd alliedmodders
-          git clone https://github.com/alliedmodders/hlsdk
+          git clone --recurse-submodules https://github.com/alliedmodders/hlsdk
 
       - name: Install AMBuild
         run: |
