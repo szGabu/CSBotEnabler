@@ -39,7 +39,7 @@ jobs:
       - name: Prepare HLSDK SDK
         run: |
           cd alliedmodders
-          git clone https://github.com/ValveSoftware/halflife
+          git clone https://github.com/alliedmodders/hlsdk
 
       - name: Install AMBuild
         run: |
@@ -52,7 +52,7 @@ jobs:
           cd module
           mkdir build
           cd build
-          python3 ../../configure.py --metamod=../../alliedmodders/metamod-p --hlsdk=../../alliedmodders/halflife
+          python3 ../../configure.py --metamod=../../alliedmodders/metamod-p --hlsdk=../../alliedmodders/hlsdk
 
       - name: Run AMBuild
         run: |
