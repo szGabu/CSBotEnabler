@@ -52,7 +52,7 @@ jobs:
           cd module
           mkdir build
           cd build
-          python3 ../configure.py --metamod=../../alliedmodders/metamod-p --hlsdk=../../alliedmodders/halflife
+          python3 ../../configure.py --metamod=../../alliedmodders/metamod-p --hlsdk=../../alliedmodders/halflife
 
       - name: Run AMBuild
         run: |
