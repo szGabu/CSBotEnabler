@@ -34,7 +34,7 @@ jobs:
       - name: Prepare Metamod
         run: |
           cd alliedmodders
-          git clone https://github.com/Bots-United/metamod-p
+          git clone https://github.com/alliedmodders/metamod-hl1
 
       - name: Prepare HLSDK SDK
         run: |
@@ -52,7 +52,7 @@ jobs:
           cd module
           mkdir build
           cd build
-          python3 ../../configure.py --metamod=../../alliedmodders/metamod-p --hlsdk=../../alliedmodders/hlsdk
+          python3 ../../configure.py --metamod=../../alliedmodders/metamod-hl1 --hlsdk=../../alliedmodders/hlsdk
 
       - name: Run AMBuild
         run: |
