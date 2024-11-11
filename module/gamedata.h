@@ -29,19 +29,33 @@
 
 #elif defined(KE_POSIX)
 
-	#define SIGNATURE_BASE  0xE8,'*','*','*','*'
-	#define SIGNATURE_BASE2 SIGNATURE_BASE,0x84,'*',0x0F,0x84,'*','*','*','*'
+	#define SIGNATURE_BASE   0xE8,'*','*','*','*'
+	#define SIGNATURE_BASE2  SIGNATURE_BASE,0x83, '*', 0x10,0x84,0x84
 
-	const byte SIGNATURE_PHRASE_MANAGER   [] = { SIGNATURE_BASE ,0x88,'*',0x31,'*',0x84,'*',0x0F };
-	const byte SIGNATURE_PROFILE_MANAGER  [] = { SIGNATURE_BASE2,0x8B,'*','*','*','*','*','*',0xC7 };
-	const byte SIGNATURE_REGISTER_CVARS   [] = { SIGNATURE_BASE2,0xC7,'*','*','*','*','*','*',0xFF };
-	const byte SIGNATURE_REGISTER_COMMANDS[] = { SIGNATURE_BASE ,0x84,'*',0x74,'*',0x8B,'*',0xBA };
-	const byte SIGNATURE_EXECUTE_COMMANDS [] = { SIGNATURE_BASE ,0x84,'*',0x74,'*',0xBF,'*','*','*','*',0xB9 };
-	const byte SIGNATURE_VALIDATE_MAP_DATA[] = { SIGNATURE_BASE ,0x84,'*',0x74,'*',0xC6 };
-	const byte SIGNATURE_PROCESS_ADD_BOT  [] = { SIGNATURE_BASE2,0x83,'*','*',0x8B,'*','*','*','*','*',0x0F };
-	const byte SIGNATURE_CLIENT_PRINT     [] = { SIGNATURE_BASE ,0x84,'*',0x0F,'*','*','*','*','*',0x8B,'*','*',0x8B,'*','*','*','*','*',0xC7 };
-	const byte SIGNATURE_HOSTAGE_IDLETHINK[] = { 0x0F,'*','*','*','*','*',0x8B,'*','*','*','*','*',0xD9,'*','*','*','*','*',0x8B,'*','*',0xD9 };
-	const char HOSTAGE_IDLETHINK_REPLACE  [] = { 0x0F,0x85 };
+	const byte SIGNATURE_PHRASE_MANAGER			[] = { SIGNATURE_BASE, 0x83, '*', 0x10, 0x84, '*', 0x0F, '*', '*', '*', '*', '*', 0x83, '*', '*', 0xFF, '*', '*', '*', '*', '*', 0x68 };
+	const byte SIGNATURE_PROFILE_MANAGER		[] = { SIGNATURE_BASE, 0x84, '*', 0x0F, 0x84, '*', '*', '*', '*', 8B '*', '*', '*', 0xC7 };
+	const byte SIGNATURE_REGISTER_CVARS			[] = { SIGNATURE_BASE, 0x83, '*', 0x10, 0x84, '*', 0x0F, '*', '*', '*', '*', '*', 83 '*', '*', 68 '*', '*', '*', '*', 0xFF };
+	const byte SIGNATURE_REGISTER_COMMANDS		[] = { SIGNATURE_BASE, 0x83, '*', 0x10, 0x84, '*', 0x74, '*', 8B '*', 0x83 };
+	const byte SIGNATURE_EXECUTE_COMMANDS		[] = { SIGNATURE_BASE, 0x83, '*', 0x10, 0x84, '*', 0x74, '*', 8B '*', '*', '*', '*', '*', 0xBF };
+	const byte SIGNATURE_VALIDATE_MAP_DATA		[] = { SIGNATURE_BASE, 0x83, '*', 0x10, 0x84, '*', 0x74, '*', C6 '*', '*', '*', '*', '*', '*', 0xE8 };
+	const byte SIGNATURE_PROCESS_ADD_BOT		[] = { SIGNATURE_BASE, 0x83, '*', 0x10, 0x84, '*', 0x0F, '*', '*', '*', '*', '*', 83 '*', '*', 0x89 };
+	const byte SIGNATURE_CLIENT_PRINT			[] = { SIGNATURE_BASE, 0x80, '*', '*', '*', '*', 0x0F '*', '*', '*', '*', '*', 0x8B };
+	const byte SIGNATURE_HOSTAGE_IDLETHINK		[] = { 0x0F, '*', '*', '*', '*', '*', 0x8B, '*', '*', '*', '*', '*', 0xD9, '*', '*', '*', '*', '*', 0x8B, '*', '*', 0xD8, '*', 0xD9, '*', '*', '*', '*', '*', 0xC7 };
+	const char HOSTAGE_IDLETHINK_REPLACE		[] = { 0x0F, 0x85 };
+
+	//#define SIGNATURE_BASE  0xE8,'*','*','*','*'
+	//#define SIGNATURE_BASE2 SIGNATURE_BASE,0x84,'*',0x0F,0x84,'*','*','*','*'
+
+	//const byte SIGNATURE_PHRASE_MANAGER   [] = { SIGNATURE_BASE ,0x88,'*',0x31,'*',0x84,'*',0x0F };
+	//const byte SIGNATURE_PROFILE_MANAGER  [] = { SIGNATURE_BASE2,0x8B,'*','*','*','*','*','*',0xC7 };
+	//const byte SIGNATURE_REGISTER_CVARS   [] = { SIGNATURE_BASE2,0xC7,'*','*','*','*','*','*',0xFF };
+	//const byte SIGNATURE_REGISTER_COMMANDS[] = { SIGNATURE_BASE ,0x84,'*',0x74,'*',0x8B,'*',0xBA };
+	//const byte SIGNATURE_EXECUTE_COMMANDS [] = { SIGNATURE_BASE ,0x84,'*',0x74,'*',0xBF,'*','*','*','*',0xB9 };
+	//const byte SIGNATURE_VALIDATE_MAP_DATA[] = { SIGNATURE_BASE ,0x84,'*',0x74,'*',0xC6 };
+	//const byte SIGNATURE_PROCESS_ADD_BOT  [] = { SIGNATURE_BASE2,0x83,'*','*',0x8B,'*','*','*','*','*',0x0F };
+	//const byte SIGNATURE_CLIENT_PRINT     [] = { SIGNATURE_BASE ,0x84,'*',0x0F,'*','*','*','*','*',0x8B,'*','*',0x8B,'*','*','*','*','*',0xC7 };
+	//const byte SIGNATURE_HOSTAGE_IDLETHINK[] = { 0x0F,'*','*','*','*','*',0x8B,'*','*','*','*','*',0xD9,'*','*','*','*','*',0x8B,'*','*',0xD9 };
+	//const char HOSTAGE_IDLETHINK_REPLACE  [] = { 0x0F,0x85 };
 
 #endif
 
